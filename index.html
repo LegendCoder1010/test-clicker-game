@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .counter {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clicker Game</h1>
+    <button id="button">Button</button>
+    <button id="otherButton">Other Button</button>
+    <div class="counter" id="clickCounter">Click Counter: 0</div>
+    <div class="counter" id="otherClickCounter">Other Click Counter: 0</div>
+
+    <script>
+        let buttonCount = 0;
+        let otherButtonCount = 0;
+
+        document.getElementById('button').addEventListener('click', function() {
+            buttonCount++;
+            document.getElementById('clickCounter').innerText = 'Click Counter: ' + buttonCount;
+        });
+
+        document.getElementById('otherButton').addEventListener('click', function() {
+            otherButtonCount++;
+            document.getElementById('otherClickCounter').innerText = 'Other Click Counter: ' + otherButtonCount;
+        });
+    </script>
+</body>
+</html>
